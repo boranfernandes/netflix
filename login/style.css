@@ -1,0 +1,250 @@
+/* Genel sayfa stili */
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Arka plan görseli */
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/TR-tr-20240923-TRIFECTA-perspective_400cd2ce-535e-42b7-b169-323b2c495389_small.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+}
+
+/* Logo stili */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+}
+
+/* Login container */
+.login-container {
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 40px 60px;
+    border-radius: 8px;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    margin: 100px auto;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5); /* Saydam siyah textbox */
+    color: #fff;
+}
+
+.input-container input:focus {
+    outline: none;
+    border: 1px solid #e50914;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #f6121d;
+}
+
+/* Gri buton stili */
+.secondary-button {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.secondary-button:hover {
+    background-color: rgba(109, 109, 110, 0.9);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.checkbox-container input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.other-options {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.other-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.other-options a:hover {
+    text-decoration: underline;
+}
+
+.help-text {
+    font-size: 13px;
+    color: #8c8c8c;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.help-text a {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 40px;
+    text-align: center;
+    color: #8c8c8c;
+    position: fixed;
+    bottom: -150px; /* Başlangıçta footer gizlenmiş durumda */
+    width: 100%;
+    transition: bottom 0.5s ease; /* Footer hareketi */
+}
+
+footer:hover {
+    bottom: 0; /* Mouse ile üzerine gelindiğinde yukarı çıksın */
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #8c8c8c;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.language-select {
+    margin-top: 20px;
+}
+
+.language-select select {
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+/* Responsive tasarım */
+@media screen and (max-width: 768px) {
+    .login-container {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .input-container input, button, .secondary-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .checkbox-container, .other-options a {
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
